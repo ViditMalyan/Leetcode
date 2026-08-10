@@ -3,7 +3,7 @@ class Solution {
         int n = num.length();
 
         // Choose the first number
-        for (int i = 1; i <= n - 2; i++) {
+        for (int i = 1; i <= n / 2; i++) {
 
             // Leading zero
             if (num.charAt(0) == '0' && i > 1) {
@@ -13,8 +13,8 @@ class Solution {
             String first = num.substring(0, i);
 
             // Choose the second number
-            for (int j = i + 1; j <= n - 1; j++) {
-
+            for (int j = i + 1; j <= i + (n - i) / 2; j++) {
+                
                 // Leading zero
                 if (num.charAt(i) == '0' && j - i > 1) {
                     break;
